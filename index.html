@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Adhere360 - Launching Soon</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link rel="stylesheet" href="js/countdown/jquery.countdown.css" />
+<!-- Scripts -->
+        <style>
+            .btn--icon-style {
+                border: 2px solid #8d17d1;
+                color: #8d17d1;
+                padding: 0.5em 1.5em;
+                border-radius: 5px;
+                background: transparent;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+            }
+            .btn--icon-style svg path {
+                fill: #8d17d1;
+            }
+            .btn--icon-style:hover {
+                background-color: #8d17d1;
+                color: #fff;
+            }
+            .btn--icon-style:hover svg path {
+                fill: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Hero Section -->
+        <section class="bg-white hero p-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-5 bg-light text-center col-fixed">
+                        <h1 class="pt-4 h2"><span class="text-green">Adhere360</span></h1>
+                        <h3>Your Health, Always on Track</h3>
+                        <p class="mt-4">
+                            Empowering Nigerians to stay on top of their health with intelligent medication adherence solutions.
+                        </p>
+                        <div class="launch-text">We're launching soon.</div>
+                        <ul id="timer">
+                            <li><span class="days">00</span><p class="days_text">Days</p></li>
+                            <li class="seperator">:</li>
+                            <li><span class="hours">00</span><p class="hours_text">Hours</p></li>
+                            <li class="seperator">:</li>
+                            <li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
+                            <li class="seperator">:</li>
+                            <li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+                        </ul>
+                        
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Adhere360 - Launching Soon</title>
+                            
+                            <!-- Styles -->
+                            <style>
+                                /* Basic styling for the Notify Me button */
+                                .intro-content__notify {
+                                    text-align: center;
+                                    margin-top: 20px;
+                                }
+                                .btn--stroke {
+                                    padding: 10px 20px;
+                                    border: 2px solid #007bff;
+                                    color: #007bff;
+                                    background: transparent;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                    font-size: 16px;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    gap: 8px;
+                                    transition: background-color 0.3s, color 0.3s;
+                                }
+                                .btn--stroke:hover {
+                                    background-color: #007bff;
+                                    color: #fff;
+                                }
+                                
+                                /* Modal Styles */
+                                .modal {
+                                    display: none; /* Hidden by default */
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-color: rgba(0, 0, 0, 0.6);
+                                    justify-content: flex-start; /* Align items to the left */
+                                    align-items: center; /* Center items vertically */
+                                    z-index: 1000;
+                                    padding-left: 10%; /* Adjust the padding to control how far left */
+                                }
+                                .modal__inner {
+                                    background: #fff;
+                                    padding: 20px;
+                                    border-radius: 8px;
+                                    width: 80%; /* Adjust the width to fit as desired */
+                                    max-width: 600px;
+                                    text-align: center;
+                                    position: relative;
+                                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+                                }
+                                .modal__close {
+                                    position: absolute;
+                                    top: 15px;
+                                    right: 15px;
+                                    font-size: 24px;
+                                    cursor: pointer;
+                                }
+                                .modal iframe {
+                                    width: 100%;
+                                    height: 400px;
+                                    border: none;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                        
+                            <!-- Notify Me Button -->
+                            <div class="intro-content__notify">
+                                <button type="button" class="btn--stroke modal-trigger" onclick="openModal()">
+                                    Notify Me
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M24 12l-9-9v7h-15v4h15v7z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        
+                            <!-- Custom Modal Structure -->
+                            <div id="notifyModal" class="modal">
+                                <div class="modal__inner">
+                                    <span class="modal__close" onclick="closeModal()">&times;</span>
+                                    <h3>Sign Up for Early Access</h3>
+                                    <p>Be the first to experience Adhere360 and receive exclusive offers.</p>
+                                    
+                                    <!-- Google Form Embed -->
+                                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6LHFkRBez86P3b4dZdJ-OYBEPAeka5_wdcYvStcAQqELqaw/viewform?embedded=true"></iframe>
+                                </div>
+                            </div>
+                        
+                            <!-- JavaScript for Modal Functionality -->
+                            <script>
+                                function openModal() {
+                                    document.getElementById("notifyModal").style.display = "flex";
+                                }
+                        
+                                function closeModal() {
+                                    document.getElementById("notifyModal").style.display = "none";
+                                }
+                        
+                                // Close the modal when clicking outside of it
+                                window.onclick = function(event) {
+                                    var modal = document.getElementById("notifyModal");
+                                    if (event.target == modal) {
+                                        closeModal();
+                                    }
+                                }
+                            </script>
+                        
+                        </body>
+                        </html>
+                        
+
+
+
+<!-- Scripts -->
+<!-- Scripts -->
+
+
+<!-- Countdown Script -->
+<script>
+    // Set launch date to 5 months from today
+    const launchDate = new Date();
+    launchDate.setMonth(launchDate.getMonth() + 5);
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.querySelector(".days").innerText = days;
+        document.querySelector(".hours").innerText = hours;
+        document.querySelector(".minutes").innerText = minutes;
+        document.querySelector(".seconds").innerText = seconds;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById("timer").innerHTML = "Launched!";
+        }
+    }
+
+    const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
+
+
+                    </div>
+
+                    </div>
+
+
+
+                    
+                    <div class="col-sm-7 offset-sm-5 px-0 py-5">
+                        <!-- About Us Section -->
+                        <section class="pt-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-8 mx-auto text-center">
+                                        <h2 class="text-primary pb-3">About Us</h2>
+                                        <p class="text-muted">
+                                            At Adhere360, we are committed to tackling Nigeria's pressing healthcare challenges by improving medication adherence. Non-adherence rates are estimated to exceed 50% across chronic conditions like diabetes and hypertension in Nigeria, leading to significant health risks and higher healthcare costs<sup>1</sup>. Our platform is designed to make healthcare management seamless, accessible, and effective for everyone by leveraging cutting-edge technology and partnerships with local pharmacies and healthcare providers.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Services Section -->
+<!-- Services Section -->
+<section class="mt-5" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h2 class="text-primary pb-3">Our Services</h2>
+                <p class="text-muted">Discover how Adhere360 is transforming healthcare in Nigeria with innovative, technology-driven solutions for medication adherence and patient support.</p>
+            </div>
+        </div>
+        <div class="row d-md-flex text-center mt-4">
+            <div class="col-sm-4 mt-2">
+                <p><em class="ion-ios-alarm-outline icon-md text-primary"></em></p>
+                <h4>AI-Powered Reminders</h4>
+                <p class="text-muted">Customized notifications powered by AI to ensure timely medication intake, helping patients adhere to treatment plans with precision.</p>
+            </div>
+            <div class="col-sm-4 mt-2">
+                <p><em class="ion-ios-pulse icon-md text-primary"></em></p>
+                <h4>Real-Time Adherence Tracking</h4>
+                <p class="text-muted">Smart trackers and IoT-enabled devices log medication intake, enabling real-time monitoring for healthcare providers.</p>
+            </div>
+            <div class="col-sm-4 mt-2">
+                <p><em class="ion-ios-people-outline icon-md text-primary"></em></p>
+                <h4>24/7 Patient Support</h4>
+                <p class="text-muted">Around-the-clock access to health coaches and educational resources, offering continuous support and guidance.</p>
+            </div>
+            <div class="col-sm-4 mt-2">
+                <p><em class="ion-stats-bars icon-md text-primary"></em></p>
+                <h4>Predictive Analytics for Health</h4>
+                <p class="text-muted">Data-driven insights predict adherence risks, enabling early interventions to improve patient outcomes.</p>
+            </div>
+            <div class="col-sm-4 mt-2">
+                <p><em class="ion-ribbon-a icon-md text-primary"></em></p>
+                <h4>Incentive-Based Adherence</h4>
+                <p class="text-muted">Rewards for consistent adherence, providing patients with redeemable perks to motivate health-positive habits.</p>
+            </div>
+            <div class="col-sm-4 mt-2">
+                <p><em class="ion-android-wifi icon-md text-primary"></em></p>
+                <h4>Offline Access & Multi-Language Support</h4>
+                <p class="text-muted">Ensuring accessibility through offline functionality and support in multiple languages, reaching underserved communities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                    
+
+                        <!-- Team Section -->
+                        <section id="team">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-8 mx-auto text-center">
+                                        <h2 class="text-primary pb-3">Our Team</h2>
+                                        <p class="text-muted">
+                                            Meet the team behind Adhere360, dedicated to making medication adherence accessible and effective for everyone.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row d-md-flex mt-4 text-center">
+                                    <div class="col-sm-4 mt-2 wow fadeInLeft">
+                                        <div class="card border-none">
+                                            <div class="card-body">
+                                                <img src="img/team-1.jpeg" alt="Jaahf" class="img-team img-fluid rounded-circle"/>
+                                                <h5 class="card-title pt-4">Jibrin Jaafaru</h5>
+                                                <p class="card-text text-muted">Founder</p>                                                <ul class="list-inline mt-3">
+                                                    <li class="list-inline-item"><a href="linkedin,.com/in/jbrnjfr"><i class="ion-social-linkedin"></i></a></li>
+                                                    <li class="list-inline-item"><a href="twitter.com/jbrnjfr"><i class="ion-social-twitter"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 mt-2 wow fadeIn">
+                                        <div class="card border-none">
+                                            <div class="card-body">
+                                                <img src="img/team-2.jpg" alt="tawe" class="img-team img-fluid rounded-circle"/>
+                                                <h5 class="card-title pt-4">Nentawe Gurumdimma</h5>
+                                                <p class="card-text text-muted">CEO</p>                                                <ul class="list-inline mt-3">
+                                                    <li class="list-inline-item"><a href="linkedin.com/in/nentawe-gurumdimma-91390b5"><i class="ion-social-linkedin"></i></a></li>
+                                                    <li class="list-inline-item"><a href="twitter.com/ntawe"><i class="ion-social-twitter"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 mt-2 wow fadeInRight">
+                                        <div class="card border-none">
+                                            <div class="card-body">
+                                                <img src="img/team-3.jpg" alt="nyam" class="img-team img-fluid rounded-circle"/>
+                                                <h5 class="card-title pt-4">Nyam Chuwang</h5>
+                                                <p class="card-text text-muted">COO</p>                                            
+                                                <ul class="list-inline mt-3">
+                                                    <li class="list-inline-item"><a href="https://x.com/nyamchuwang"><i class="ion-social-linkedin"></i></a></li>
+                                                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/nyam-chuwang-003a8771/"><i class="ion-social-twitter"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Contact Section -->
+                       <!-- Contact Us Section -->
+<section class="p-5" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h2 class="text-primary pb-3">Contact Us</h2>
+                <p class="text-muted">We’d love to hear from you! Reach out to Adhere360 for more information, partnership inquiries, or support. Our team is here to help you stay on track with your health.</p>
+            </div>
+        </div>
+        <div class="row d-md-flex text-primary text-center mt-4">
+            <div class="col-sm-4 p-4">
+                <p><em class="ion-ios-telephone-outline icon-md"></em></p>
+                <h5>+234 803 090 105</h5>
+                <p class="text-muted">Give us a call for immediate assistance.</p>
+            </div>
+            <div class="col-sm-4 p-4">
+                <p><em class="ion-ios-email-outline icon-md"></em></p>
+                <h5>contact@adhere360.ng</h5>
+                <p class="text-muted">Email us for general inquiries or support requests.</p>
+            </div>
+            <div class="col-sm-4 p-4">
+                <p><em class="ion-ios-location-outline icon-md"></em></p>
+                <h5>Jos, Nigeria</h5>
+                <p class="text-muted">Our headquarters in Jos. Visit us by appointment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Section for Adhere360 -->
+<section id="follow-us" class="pt-5">
+    <div class="container text-center">
+        <h2 class="text-primary pb-3">Follow Us</h2>
+        <p class="text-muted">Stay connected with Adhere360 on social media:</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="twitter.com/adhere360" target="_blank"><i class="ion-social-twitter icon-md text-primary"></i></a></li>
+            <li class="list-inline-item"><a href="linkedin.com/in/adhere360" target="_blank"><i class="ion-social-linkedin icon-md text-primary"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+                        <!-- Footer -->
+                        <section class="mt-2">
+                            <div class="container">
+                                <div class="row mr-5 ml-5">
+                                    <div class="col-sm-12">
+                                        <p class="text-muted text-center">
+                                             designed at: <a href="https://adhere360.ng" target="_blank">Adhere360</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/scripts.js"></script>
+        <!-- Scripts -->
+    </body>
+</html>
